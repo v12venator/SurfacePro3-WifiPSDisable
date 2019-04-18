@@ -13,19 +13,25 @@ Firstly, we will need to create the systemd link, which is done with:
 Your text editor should come up to a blank screen.
 
 Then you will enter the following chunk:
+
 ---------------------------------------------------
-#Disable wifi power saving mode on Surface Pro 3
+>#Disable wifi power saving mode on Surface Pro 3
 
-[Unit]
-Description=Turn off Wireless Power Saving Mode
-After=multi-user.target
+>[Unit]
 
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/iw dev wlp1s0 set power_save off
+>Description=Turn off Wireless Power Saving Mode
 
-[Install]
-WantedBy=multi-user.target
+>After=multi-user.target
+
+>[Service]
+
+>Type=oneshot
+
+>ExecStart=/usr/bin/iw dev wlp1s0 set power_save off
+
+>[Install]
+
+>WantedBy=multi-user.target
 
 ---------------------------------------------------
 
