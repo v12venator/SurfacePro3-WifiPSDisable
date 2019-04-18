@@ -21,13 +21,19 @@ Then you will enter the following chunk:
 
 >Description=Turn off Wireless Power Saving Mode
 
->Requires=NetworkManager.target
+>Requires=NetworkManager.service
+
+>After=NetworkManager.service
+
+
 
 >[Service]
 
 >Type=oneshot
 
 >ExecStart=/usr/bin/iw dev wlp1s0 set power_save off
+
+
 
 >[Install]
 
