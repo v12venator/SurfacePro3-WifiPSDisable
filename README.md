@@ -21,13 +21,17 @@ Then you will enter the following chunk:
 
 >Description=Turn off Wireless Power Saving Mode
 
->After=multi-user.target
+>Requires=NetworkManager.target
 
 >[Service]
 
 >Type=oneshot
 
 >ExecStart=/usr/bin/iw dev wlp1s0 set power_save off
+
+>[Install]
+
+>WantedBy=multi-user.target
 
 ---------------------------------------------------
 
