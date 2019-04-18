@@ -29,10 +29,6 @@ Then you will enter the following chunk:
 
 >ExecStart=/usr/bin/iw dev wlp1s0 set power_save off
 
->[Install]
-
->WantedBy=multi-user.target
-
 ---------------------------------------------------
 
 Once that is populated, exit and save.
