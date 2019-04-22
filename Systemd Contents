@@ -1,0 +1,12 @@
+[Unit]
+Description=Turn off Wireless Power Saving Mode
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/iw dev wlp1s0 set power_save off
+RestartSec=5
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
