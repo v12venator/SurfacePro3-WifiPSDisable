@@ -55,4 +55,3 @@ If your terminal returns "Power save:off" you know that your entry is successful
 ## 1. The service name does not have to be "wifipsdisable" that is only for this readme.
 ## 2. The After= line does not need to point to multi-user.target, only a point in the sequence in which your network manager has brought up and assigned the wireless interface a name.
 ## 3. Your wireless interface name may be different from wlp1s0 used in this readme. To find this, run "ip add" and see what your interface's name is.
-## 4. A copy of the contents as been provided and a bash and fish script is in the works.
