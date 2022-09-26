@@ -9,4 +9,4 @@ RestartSec=5
 Restart=on-failure
 
 [Install]
-WantedBy=graphical.target
+WantedBy=multi-user.target
